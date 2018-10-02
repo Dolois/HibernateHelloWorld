@@ -19,7 +19,20 @@ Cette application sert à ajouter des informations à une base de données sur d
 ## <a name="title2">Création de la base de données</a>
 
 En amont, il faut créer une base de données *universite* et une table *Lecturer*.
-Le script pour le faire est disponible [ici](https://github.com/vanessahuhn/HibernateHelloWorld/blob/master/SQL/createDB%20%2B%20table.sql). Il est possible de ne pas spécifier les champs *FName* et *LName* qui seront automatiquement créés au lancement de l'application.
+
+Sous mySQL WorkBench :
+CREATE DATABASE `universite`;
+
+USE `universite`;
+
+CREATE TABLE `lecturer` (
+ID int NOT NULL auto_increment,
+FName VARCHAR(50) NULL,
+LName varchar(50) NULL,
+PRIMARY KEY (ID)
+);   
+
+Il est possible de ne pas spécifier les champs *FName* et *LName* qui seront automatiquement créés au lancement de l'application.
 
 ## <a name="title3">Création du projet Java</a>
 

@@ -1,8 +1,8 @@
 # HibernateHelloWorld
 
 1. [Introduction](#title1)
-2. [Création de la base de données](#title2)
-3. [Création du projet Java](#title3)
+2. [CrÃ©ation de la base de donnÃ©es](#title2)
+3. [CrÃ©ation du projet Java](#title3)
 
    [La classe persistante 'Lecturer.java'](#subtitle1)
    
@@ -14,49 +14,47 @@
 
 ## <a name="title1">Introduction</a>
 
-Cette application sert à ajouter des informations à une base de données sur des maîtres de conférence d'une université.
+Cette application sert Ã  ajouter des informations Ã  une base de donnÃ©es sur des maÃ®tres de confÃ©rence d'une universitÃ©.
 
-## <a name="title2">Création de la base de données</a>
+## <a name="title2">CrÃ©ation de la base de donnÃ©es</a>
 
-En amont, il faut créer une base de données *universite* et une table *Lecturer*.
-Le script pour le faire est disponible [ici](https://github.com/vanessahuhn/HibernateHelloWorld/blob/master/SQL/createDB%20%2B%20table.sql). Il est possible de ne pas spécifier les champs *FName* et *LName* qui seront automatiquement créés au lancement de l'application.
+En amont, il faut crÃ©er une base de donnÃ©es *universite* et une table *Lecturer*.
+Le script pour le faire est disponible [ici](https://github.com/vanessahuhn/HibernateHelloWorld/blob/master/SQL/createDB%20%2B%20table.sql). Il est possible de ne pas spÃ©cifier les champs *FName* et *LName* qui seront automatiquement crÃ©Ã©s au lancement de l'application.
 
-## <a name="title3">Création du projet Java</a>
+## <a name="title3">CrÃ©ation du projet Java</a>
 
 ### <a name="subtitle1">La classe persistante 'Lecturer.java'</a>
 
-Cette classe est notre classe modèle.
-Elle est aussi appelée classe persistante.
-Elle correspond à la table *Lecturer* de notre base de données.
-Elle est placée dans le package *model*.
+Cette classe est notre classe modÃ¨le.
+Elle est aussi appelÃ©e classe persistante.
+Elle correspond Ã  la table *Lecturer* de notre base de donnÃ©es.
+Elle est placÃ©e dans le package *model*.
 
 ### <a name="subtitle2">Fichier de mappage 'Lecturer.hbm.xml'</a>
 
 Ce fichier est disponible [ici](https://github.com/vanessahuhn/HibernateHelloWorld/blob/master/src/Lecturer.hbm.xml).
-Il permet d'indiquer à Hibernate quelle classe représente quelle table et quelle variable instantanée correspond à quelle colonne. 
+Il permet d'indiquer Ã  Hibernate quelle classe reprÃ©sente quelle table et quelle variable instantanÃ©e correspond Ã  quelle colonne. 
 
-Dans le tag *class*, l'attribut name correspond au nom de la classe persistante et table spécifie au nom de la table de la base de données.
+Dans le tag *class*, l'attribut name correspond au nom de la classe persistante et table spÃ©cifie au nom de la table de la base de donnÃ©es.
 
-Dans le tag *property*, l'attribut name correspond à l'attribut de la classe persistante et column spécifie le nom du champ dans la base de données.
-L'attribut type permet de définir le type de données (ici, string).
+Dans le tag *property*, l'attribut name correspond Ã  l'attribut de la classe persistante et column spÃ©cifie le nom du champ dans la base de donnÃ©es.
+L'attribut type permet de dÃ©finir le type de donnÃ©es (ici, string).
 
-/!\ **Attention**, avec le nom de la classe il faut penser à ajouter le nom du package.
+/!\ **Attention**, avec le nom de la classe il faut penser Ã  ajouter le nom du package.
 Ici, le nom de la classe est *model.Lecturer*.
 
 ### <a name="subtitle3">Le fichier de configuration 'hibernate.cfg.xml'</a>
 
-Ce fichier est disponible [ici](https://github.com/dolois/HibernateHelloWorld/blob/master/src/hibernate.cfg.xml). Il permet de définir les configurations Hibernate.
+Ce fichier est disponible [ici](https://github.com/dolois/HibernateHelloWorld/blob/master/src/hibernate.cfg.xml). Il permet de dÃ©finir les configurations Hibernate.
 
 /!\ **Attention**, il faut modifier :
 
-- le nom de la base de données dans la propriété *connection.url*
-- le nom de l'utilisateur du serveur MySQL dans la propriété *connection.username* car il est *root* par défaut
-- le mot de passe du serveur MySQL dans la propriété *connection.password*
+- le nom de la base de donnÃ©es dans la propriÃ©tÃ© *connection.url*
+- le nom de l'utilisateur du serveur MySQL dans la propriÃ©tÃ© *connection.username* car il est *root* par dÃ©faut
+- le mot de passe du serveur MySQL dans la propriÃ©tÃ© *connection.password*
 
 
 ### <a name="subtitle4">La classe de test 'SimpleTest.java'</a>
 
 Le fichier pour cette classe est disponible [ici](https://github.com/dolois/HibernateHelloWorld/blob/master/src/SimpleTest.java). 
-Il s'agit de la classe qui contient la méthode main. Elle est placée dans le package *default package*.
-
-/!\ **Attention**, il faut importer la classe persistante.
+Il s'agit de la classe qui contient la mÃ©thode main. Elle est placÃ©e dans le package *default package*.

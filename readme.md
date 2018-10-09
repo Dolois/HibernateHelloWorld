@@ -45,7 +45,7 @@ Elle est placée dans le package *model*.
 
 ### <a name="subtitle2">Fichier de mappage 'Lecturer.hbm.xml'</a>
 
-Ce fichier est disponible [ici](https://github.com/vanessahuhn/HibernateHelloWorld/blob/master/src/Lecturer.hbm.xml).
+Ce fichier est disponible [ici](https://github.com/Dolois/HibernateHelloWorld/blob/master/src/Lecturer.hbm.xml).
 Il permet d'indiquer à Hibernate quelle classe représente quelle table et quelle variable instantanée correspond à quelle colonne. 
 
 Dans le tag *class*, l'attribut name correspond au nom de la classe persistante et table spécifie au nom de la table de la base de données.
@@ -58,7 +58,7 @@ Ici, le nom de la classe est *model.Lecturer*.
 
 ### <a name="subtitle3">Le fichier de configuration 'hibernate.cfg.xml'</a>
 
-Ce fichier est disponible [ici](https://github.com/dolois/HibernateHelloWorld/blob/master/src/hibernate.cfg.xml). Il permet de définir les configurations Hibernate.
+Ce fichier est disponible [ici](https://github.com/Dolois/HibernateHelloWorld/blob/master/src/hibernate.cfg.xml). Il permet de définir les configurations Hibernate.
 
 /!\ **Attention**, il faut modifier :
 
@@ -69,5 +69,5 @@ Ce fichier est disponible [ici](https://github.com/dolois/HibernateHelloWorld/bl
 
 ### <a name="subtitle4">La classe de test 'SimpleTest.java'</a>
 
-Le fichier pour cette classe est disponible [ici](https://github.com/dolois/HibernateHelloWorld/blob/master/src/SimpleTest.java). 
+Le fichier pour cette classe est disponible [ici](https://github.com/Dolois/HibernateHelloWorld/blob/master/src/SimpleTest.java). 
 Il s'agit de la classe qui contient la méthode main. Elle est placée dans le package *default package*.
